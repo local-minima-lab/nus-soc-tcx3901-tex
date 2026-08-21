@@ -1,39 +1,37 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
 \input{preamble.tex}
+
+% =============================================================================
+% TCX3901/TIC3901 — one document, three submissions (Notes to Students, 3.1.1)
+%
+% This single report is grown over the two semesters and the SAME file is
+% submitted on ACES at each deadline (every student must submit, even for a
+% group report — group members may all submit the same file):
+%
+%   a. Report 1: Proposal        Sem 1, end of Week 5
+%   b. Report 2: Mid-Term        Sem 2, end of Week 2
+%   c. Report 3: Final           Sem 2, end of Week 8
+%
+% Each submission: not more than 10 pages, excluding appendices and references;
+% each part: not more than 3 pages.
+% =============================================================================
 
 \begin{document}
 
-\input{cover.tex}
 \input{title.tex}
-\pagenumbering{roman}
-\input{chapters/abstract.tex}
-\input{chapters/acknowledgements.tex}
 
-% only show chapters and sections in the ToC
-\setcounter{tocdepth}{1}
-\tableofcontents
+\input{contributions.tex}
+
+\input{report1.tex}
 \clearpage
-
-\listoffigures
-\addcontentsline{toc}{chapter}{\listfigurename}
-\listoftables
-\addcontentsline{toc}{chapter}{\listtablename}
+\input{report2.tex}
 \clearpage
+\input{report3.tex}
 
-\pagenumbering{arabic}
-\setcounter{page}{1}
-\input{chapters/intro.tex}
-\input{chapters/preliminaries.tex}
-\input{chapters/implementation.tex}
-\input{chapters/evaluation.tex}
-\input{chapters/challenges.tex}
-\input{chapters/conclusion.tex}
-
+% References and appendices are excluded from the 10-page limit.
 \clearpage
-\printbibliography[heading=bibintoc, title={References}]
+\printbibliography[title={References}]
 
-\input{chapters/appendix-a.tex}
-\input{chapters/appendix-b.tex}
+\input{appendix-a.tex}
 
 \end{document}
-

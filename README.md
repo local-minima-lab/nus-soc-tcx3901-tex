@@ -1,25 +1,28 @@
-# NUS SoC LaTeX Template
+# NUS SCALE TCX3901/TIC3901 Report Template
 
-LaTeX template for NUS SoC UROP/FYP final report.
-Made based on
-- [NUS SoC UROP report format guidelines](https://www.comp.nus.edu.sg/wp-content/uploads/2023/10/UROP_Report_Format.pdf).
-- [NUS SoC FYP report format
-guidelines](https://www.comp.nus.edu.sg/wp-content/uploads/2023/10/FYP-Report-Format-final_000.pdf)
+LaTeX template for the TCX3901/TIC3901 Industrial Practice reports. The
+Proposal, Mid-Term and Final reports are written in a single document as
+Parts I–III, developed over the two semesters and submitted at each
+deadline. Sample: [sample/sample.pdf](sample/sample.pdf).
 
-Sample report can be found [here](sample/sample.pdf).
+## How to use
 
-To compile the pdf (this will automatically compile the pdf whenever the source files are modified):
-```bash
-latexmk -pdf -outdir=build -pvc main.tex
-```
+1. Configure the block at the bottom of [preamble.tex](preamble.tex)
+   (course, title, members, advisor, repository).
+2. Write in [report1.tex](report1.tex) / [report2.tex](report2.tex) /
+   [report3.tex](report3.tex) (one file per part).
+3. Keep [contributions.tex](contributions.tex) updated at every submission.
+4. References go in [cite.bib](cite.bib), appendices in
+   [appendix-a.tex](appendix-a.tex).
 
-To modify the Project Type (UROP or FYP), Project Title, Author Name and Academic Year, modify the
-last few lines of [preamble.tex](preamble.tex)
+Don't change the geometry or font; they follow the required format.
+Max 10 pages per report; **max 3 pages per part**, with the Individual
+Contributions page taking 1 page.
 
-```latex
-% \newcommand{\projecttype}{B.Comp. Dissertation}
-\newcommand{\projecttype}{Undergraduate Research Opportunity Programme (UROP) Project Report}
-\newcommand{\authorname}{John Doe}
-\newcommand{\projecttitle}{Project Title}
-\newcommand{\academicyear}{2024/2025}
-```
+## Compile
+
+- **Overleaf** (Recommended, free for NUS students):
+  1. [Download the zip](https://github.com/local-minima-lab/nus-soc-tcx3901-tex/archive/refs/heads/main.zip).
+  2. **New Project → Upload Project** and select the zip; it compiles as-is.
+  3. Submit via **Download PDF**.
+- **Local**: `make` (or `make watch` / `make clean`).

@@ -1,27 +1,35 @@
 \newgeometry{left=3cm,right=3cm,top=3cm,bottom=3cm}
+% No page anchor on the title page: it shares page number 1 with the next
+% page (titlepage resets the counter), which would duplicate the hyperref
+% destination.
+\hypersetup{pageanchor=false}
 \begin{titlepage}
     {\centering
-    {\large \projecttype}
+    {\large \coursecode\ \coursename}
     \vfill
     {\LARGE\bfseries \projecttitle\par}
-    \vspace{2cm}
-    {\large By\par \authorname}
+    \vspace{1cm}
+    {\normalsize (\projectkind)\par}
+    \vspace{1cm}
+    {\large By\par \authorname\par}
     \vfill
-    {\normalsize Department of Computer Science\par
-    School of Computing\par
+    {\normalsize \programme\par
+    {\setstretch{1.0}School of Continuing and Lifelong Education (SCALE)\\
+    School of Computing (SoC)\par}
     National University of Singapore\par}
     \vspace{1cm}
 % Bottom of the page
     {\normalsize \academicyear\par}
     }
     \vspace{1cm}
-    Project ID: UXXXXX \par
-    Advisor: Professor John Doe \par
+    Supervisor: \advisorname \par
     \vspace{1cm}
     Deliverables: \par
     \begin{list}{\quad}{}
         \item Report: 1 Volume
+        \item Repository: \url{\repourl}
     \end{list}
 \end{titlepage}
+\hypersetup{pageanchor=true}
 \restoregeometry
 \pagebreak
