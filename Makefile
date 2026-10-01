@@ -1,16 +1,24 @@
 BUILD_DIR = build
+# Document to build: main.tex (report), ppt1.tex or ppt2.tex (slides),
+# e.g. `make watch MAIN=ppt1.tex`
 MAIN = main.tex
-PDF = $(BUILD_DIR)/main.pdf
+DOCS = main.tex ppt1.tex ppt2.tex
 
-.PHONY: all watch clean
+.PHONY: all report ppt1 ppt2 watch clean
 
 all:
-	latexmk -pdf -outdir=$(BUILD_DIR) $(MAIN)
+	latexmk -pdf -outdir=$(BUILD_DIR) $(DOCS)
+
+report:
+	latexmk -pdf -outdir=$(BUILD_DIR) main.tex
+
+ppt1 ppt2:
+	latexmk -pdf -outdir=$(BUILD_DIR) $@.tex
 
 # Recompile automatically whenever a source file changes
 watch:
 	latexmk -pdf -outdir=$(BUILD_DIR) -pvc $(MAIN)
 
 clean:
-	latexmk -outdir=$(BUILD_DIR) -C $(MAIN)
+	latexmk -outdir=$(BUILD_DIR) -C $(DOCS)
 	rm -rf $(BUILD_DIR)

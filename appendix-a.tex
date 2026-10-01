@@ -1,13 +1,19 @@
 \clearpage
-\renewcommand{\appendixtocname}{Appendix A - Something}
-\renewcommand{\appendixpagename}{Appendix A - Something}
 
 % Appendices are excluded from the 10-page limit.
 % Page numbers in the format A-1, A-2, ...
 \renewcommand{\thepage}{A-\arabic{page}}
 \setcounter{page}{1}
 
+% One \section per appendix (Appendix A, B, ...). Supporting detail that does
+% not fit in a 3-page part belongs here, referenced from the text.
 \begin{appendices}
+
+\section{User Story Backlog}
 \label{appendix:a}
+
+\guide{List the full backlog of user stories, each with a unique identifier
+and its conditions of satisfaction. Add further appendices as needed, e.g.\
+background on an existing system, data sources or supplementary figures.}
 
 \end{appendices}

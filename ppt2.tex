@@ -1,0 +1,138 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+% =============================================================================
+% Presentation 2 — Semester 2, end of Week 12 (11 April 2027)
+%
+% Follows Report 3 (Final, Sem 2 end of Week 8): present the completed
+% project, its evaluation and your reflection, as in report3.tex. Replace
+% the red \guide{...} prompts with your own content, and adjust the outline
+% to the format and duration set by your Academic Advisor/Supervisor.
+% =============================================================================
+\newcommand{\presentationname}{Presentation 2}
+\input{ppt-preamble.tex}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Recap}
+
+\begin{frame}{Problem and Objectives}
+    \begin{itemize}
+        \item \guide{Brief recap of the problem and motivation. Example citation
+              \autocite{lamport_time_1978}.}
+        \item \guide{The objectives set out in the proposal, and any changes to the
+              objectives, scope or approach since Presentation 1.}
+    \end{itemize}
+\end{frame}
+
+\section{Implementation}
+
+\begin{frame}{Implementation}
+    \begin{itemize}
+        \item \guide{What was ultimately built and delivered.}
+        \item \guide{How it fulfils the objectives.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Design Overview}
+    \begin{itemize}
+        \item \guide{The final design or architecture (a diagram from
+              \texttt{images/} works best).}
+        \item \guide{Key decisions and their trade-offs.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Demo}
+    \begin{itemize}
+        \item \guide{Live demo or screenshots of the delivered project.}
+    \end{itemize}
+\end{frame}
+
+\section{Evaluation}
+
+\begin{frame}{Evaluation}
+    \begin{itemize}
+        \item \guide{How the outcome was evaluated: methodology, setup and metrics.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Results}
+    \begin{itemize}
+        \item \guide{Results and their interpretation, related back to the
+              objectives and user stories.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Challenges}
+    \begin{itemize}
+        \item \guide{Difficulties encountered and how they were mitigated.}
+    \end{itemize}
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}{Summary}
+    \begin{itemize}
+        \item \guide{What was achieved, measured against the objectives.}
+    \end{itemize}
+\end{frame}
+
+% This reflection is the core of the course objective: how concepts and
+% theories gained in the classroom translate into (industrial) practice.
+\begin{frame}{Reflection}
+    \begin{itemize}
+        \item \guide{How concepts and theories from your degree programme were
+              applied in the project, and how they shaped its outcome.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Future Work}
+    \begin{itemize}
+        \item \guide{Extensions or improvements that could follow from this project.}
+    \end{itemize}
+\end{frame}
+
+% Group projects only (hidden when \individualprojecttrue is set in config.tex).
+% Delete the rows for unused members, as in contributions.tex.
+\ifindividualproject\else
+\begin{frame}{Individual Contributions}
+    \centering
+    \begin{tabular}{llp{0.4\textwidth}}
+        \toprule
+        Member & Role & Contributions \\
+        \midrule
+        Member One & Team Lead & \\
+        Member Two & Backend Developer & \\
+        Member Three & Frontend Developer & \\
+        Member Four & QA \& Testing Lead & \\
+        Member Five & DevOps \& Documentation & \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{1em}
+    \guide{\small Not needed for an individual project: set
+    \texttt{\textbackslash individualprojecttrue} in \texttt{config.tex} to
+    remove this slide.}
+\end{frame}
+\fi
+
+\begin{frame}[allowframebreaks]{References}
+    \printbibliography[heading=none]
+\end{frame}
+
+\begin{frame}[plain]
+    \centering
+    {\Large\bfseries\usebeamercolor[fg]{structure} Thank you\par}
+    \vspace{1em}
+    Questions?\par
+    \vspace{1em}
+    {\small\url{\repourl}}
+\end{frame}
+
+\end{document}

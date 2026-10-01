@@ -1,0 +1,43 @@
+% Shared preamble for the slides (ppt1.tex, ppt2.tex).
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs} % For better-looking horizontal separators
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[
+    backend=biber,
+    style=apa,
+    sorting=nyt
+]{biblatex}
+\addbibresource{cite.bib}
+\usepackage{listings}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single
+}
+
+% Look: plain theme in NUS blue/orange, slide numbers, no navigation symbols
+\definecolor{nusblue}{HTML}{003D7C}
+\definecolor{nusorange}{HTML}{EF7C00}
+\usecolortheme[named=nusblue]{structure}
+\setbeamercolor{alerted text}{fg=nusorange}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{bibliography item}{}
+\setbeamertemplate{frametitle continuation}{}
+
+% Project configuration (course, title, members, advisor, repository)
+\input{config.tex}
+
+% \presentationname is defined in ppt1.tex / ppt2.tex
+\title{\projecttitle}
+\subtitle{\coursecode\ \coursename\ --- \presentationname}
+\author[\coursecode]{\authorname}
+\institute{Supervisor: \advisorname\\[1ex]
+    \programme\\
+    National University of Singapore}
+\date{\academicyear\\[1ex]
+    {\footnotesize Repository: \repolink}}

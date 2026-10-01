@@ -1,0 +1,175 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+% =============================================================================
+% Presentation 1 — Semester 1, end of Week 8 (11 October 2026)
+%
+% Follows Report 1 (Proposal, Sem 1 end of Week 5): present the proposal in
+% report1.tex and the progress made since. Replace the red \guide{...}
+% prompts with your own content, and adjust the outline to the format and
+% duration set by your Academic Advisor/Supervisor.
+% =============================================================================
+\newcommand{\presentationname}{Presentation 1}
+\input{ppt-preamble.tex}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item \guide{Background and context of the project.}
+        \item \guide{The problem it addresses. Example citation
+              \autocite{lamport_time_1978}.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Existing Solutions}
+    \begin{itemize}
+        \item \guide{The closest existing systems or related work, with citations.}
+        \item \guide{How each works, and why it is still insufficient.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+    \begin{itemize}
+        \item \guide{The gap or need the project responds to.}
+        \item \guide{Who benefits from its outcome.}
+    \end{itemize}
+\end{frame}
+
+\section{Objectives and Scope}
+
+\begin{frame}{Objectives and Scope}
+    \begin{block}{Objective}
+        \guide{The overall objective in one or two sentences: we aim to build
+        \ldots\ such that \ldots}
+    \end{block}
+    \begin{block}{Scope}
+        \guide{What the project covers and where its limits are; assumptions and
+        constraints.}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Requirements}
+    \begin{itemize}
+        \item \guide{Key user stories, each with testable conditions of
+              satisfaction.}
+        \item \guide{Keep to the most important few; the full backlog is in the
+              report.}
+    \end{itemize}
+\end{frame}
+
+\section{Approach}
+
+\begin{frame}{Approach}
+    \begin{itemize}
+        \item \guide{How the work is carried out: the development process and
+              what each iteration delivers.}
+        \item \guide{The technologies used.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Architecture}
+    \begin{itemize}
+        \item \guide{The components of the system, what each is responsible for and
+              how they interact.}
+        \item \guide{A diagram works better than text here:
+              \texttt{\textbackslash includegraphics} from \texttt{images/}.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Design Decisions}
+    \begin{itemize}
+        \item \guide{Key decisions about the system: the choice made and the
+              alternatives considered.}
+        \item \guide{The reason for each choice.}
+    \end{itemize}
+\end{frame}
+
+\section{Progress}
+
+\begin{frame}{Progress to Date}
+    \begin{itemize}
+        \item \guide{Work completed since the proposal.}
+        \item \guide{Early prototype, demo or findings.}
+    \end{itemize}
+\end{frame}
+
+\section{Project Plan}
+
+% The development plan for the project itself: the iterations and which user
+% stories are implemented in what sequence, with the course deliverables
+% (reports, presentations) placed against the iteration they fall in (each
+% is due at the end of its period).
+% The rows below are examples; replace them with your own. The \alert row
+% marks the current iteration.
+\begin{frame}{Project Plan}
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{clll}
+        \toprule
+        Iteration & Period & User Stories and Outcome & Deliverable \\
+        \midrule
+        0 & Sem 1, Weeks 1--5 & \guide{Requirements, architecture} & Report 1 \\
+        \alert{1} & \alert{Sem 1, Weeks 6--8} & \alert{US1, US2: core story end to end} & \alert{Presentation 1} \\
+        2 & Sem 1, Weeks 9--13 & \guide{US3, US4: must-have stories complete} & \\
+        3 & Sem 2, Weeks 1--2 & \guide{US5, US6: integrated and deployed} & Report 2 \\
+        4 & Sem 2, Weeks 3--8 & \guide{US7: evaluation complete} & Report 3 \\
+        5 & Sem 2, Weeks 9--12 & \guide{Fixes from the evaluation} & Presentation 2 \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{1em}
+    \normalsize
+    \begin{itemize}
+        \item \guide{Where the project is now (highlighted) and what comes next.}
+        \item \guide{Key risks to the plan and how they will be managed.}
+    \end{itemize}
+\end{frame}
+
+% Group projects only (hidden when \individualprojecttrue is set in config.tex).
+% Delete the rows for unused members, as in contributions.tex.
+\ifindividualproject\else
+\begin{frame}{Individual Contributions}
+    \centering
+    \begin{tabular}{llp{0.4\textwidth}}
+        \toprule
+        Member & Role & Contributions \\
+        \midrule
+        Member One & Team Lead & \\
+        Member Two & Backend Developer & \\
+        Member Three & Frontend Developer & \\
+        Member Four & QA \& Testing Lead & \\
+        Member Five & DevOps \& Documentation & \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{1em}
+    \guide{\small Not needed for an individual project: set
+    \texttt{\textbackslash individualprojecttrue} in \texttt{config.tex} to
+    remove this slide.}
+\end{frame}
+\fi
+
+\begin{frame}[allowframebreaks]{References}
+    \printbibliography[heading=none]
+\end{frame}
+
+\begin{frame}[plain]
+    \centering
+    {\Large\bfseries\usebeamercolor[fg]{structure} Thank you\par}
+    \vspace{1em}
+    Questions?\par
+    \vspace{1em}
+    {\small\url{\repourl}}
+\end{frame}
+
+\end{document}

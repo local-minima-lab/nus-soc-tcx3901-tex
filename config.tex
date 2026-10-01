@@ -1,0 +1,48 @@
+% ---------------- Project configuration ----------------
+% Shared by the report (main.tex) and the slides (ppt1.tex, ppt2.tex).
+% Course: TCX3901 (BIT) or TIC3901 (BTech Computing)
+\newcommand{\coursecode}{TCX3901}
+% \newcommand{\coursecode}{TIC3901}
+\newcommand{\coursename}{Industrial Practice}
+\newcommand{\programme}{Bachelor of Information Technology Programme}
+% \newcommand{\programme}{Bachelor of Technology Programme}
+
+% Project type: Work-Related or Non-Work-Related (see README for the caveats)
+\newcommand{\projectkind}{Non-Work-Related Project}
+% \newcommand{\projectkind}{Work-Related Project}
+
+% Individual (single-student) project: uncomment \individualprojecttrue. The
+% contributions page then becomes a declaration of individual work.
+\newif\ifindividualproject
+% \individualprojecttrue
+
+% List all group members, up to 5 (one per line with \\; delete unused lines),
+% each with their own matriculation number — every student must still submit
+% the (same) file on ACES for tracking purposes.
+\newcommand{\authorname}{%
+    Member One (A0000001V)\\
+    Member Two (A0000002W)\\
+    Member Three (A0000003X)\\
+    Member Four (A0000004Y)\\
+    Member Five (A0000005Z)}
+\newcommand{\advisorname}{Dr. Han Liang Wee, Eric}
+\newcommand{\projecttitle}{Project Title}
+\newcommand{\academicyear}{AY2026/27}
+% Link to the group's source code repository. Create it early and add your
+% supervisor (GitHub: eric-vader) as a collaborator so that it can be accessed.
+\newcommand{\repourl}{https://github.com/your-group/your-repo}
+
+% (No need to edit below.)
+% Template guidance: \guide{...} marks prompts to the writer, in the report
+% and the slides. They are typeset in red so that they are not mistaken for
+% your own text — replace all of them; none should remain in a submission.
+\newcommand{\guide}[1]{{\itshape\color{red}#1}}
+
+% The link is flagged in red until the placeholder above
+% is replaced.
+\newcommand{\placeholderrepourl}{https://github.com/your-group/your-repo}
+\newcommand{\repolink}{\url{\repourl}%
+    \ifx\repourl\placeholderrepourl
+        \ \textcolor{red}{(replace and add supervisor to repo)}%
+    \fi}
+

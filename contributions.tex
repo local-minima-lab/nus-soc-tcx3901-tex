@@ -3,13 +3,30 @@
 % at the Academic Advisor/Supervisor's discretion. For a group report where
 % students are assessed individually, either each member is assigned different
 % parts of the project, or members indicate their individual contributions here.
+%
+% Individual project: set \individualprojecttrue in config.tex. This page then
+% becomes a declaration of individual work instead of the contributions table.
+\ifindividualproject
+
+\section*{Declaration}
+
+I declare that this report and the project it describes are my own individual
+work, except where otherwise acknowledged.
+
+\else
+
 \section*{Individual Contributions}
 
-State each member's role in the group and their responsibilities
+\guide{State each member's role in the group and their responsibilities
 (Table~\ref{tab:Contributions}), then each member's contributions for the
 period covered by each part. Update this page at every submission.
 
-% Delete the rows (and the matching \authorname lines in preamble.tex) for
+For an individual project (not a team), individual contributions are not
+needed: set \texttt{\textbackslash individualprojecttrue} in
+\texttt{config.tex} and this section is replaced by a declaration of
+individual work.}
+
+% Delete the rows (and the matching \authorname lines in config.tex) for
 % unused members — the layout adjusts automatically.
 \begin{table}[H]
 \centering
@@ -27,12 +44,15 @@ Member Five & DevOps \& Documentation & \\
 \caption{Roles and responsibilities}\label{tab:Contributions}
 \end{table}
 
+% Add a paragraph for Part II and Part III when each is submitted.
 \paragraph{Part I: Proposal}
-State each member's contributions up to the proposal.
+\guide{State each member's contributions up to the proposal.}
 
-\paragraph{Part II: Mid-Term Report}
-To be completed at the mid-term submission.
+\fi
 
-\paragraph{Part III: Final Report}
-To be completed at the final submission.
+\paragraph{Use of AI Tools}
+\guide{State specifically which AI tools were used, for which tasks (e.g.\
+drafting a named section, generating code for a named component, debugging)
+and how the output was checked. ``I used AI to learn'' is too vague. If none
+were used, say so.}
 \clearpage

@@ -7,76 +7,103 @@
 %   BTech/BIT programme in their full-time job."
 %   Non-work-related project: "A proposal summarizing how the student intends
 %   to approach their assigned project topic over the two semesters."
+%
+% Not more than 3 pages. The red \guide{...} text is guidance for you:
+% replace all of it with your own writing. Start each section with its
+% content — do not open with sentences that describe the report itself
+% ("This section states ...").
 % =============================================================================
 \part{Proposal}
 \label{part:Proposal}
 
-\emph{This proposal sets out the objectives, approach and plan of work for
-the assigned project over the two semesters.}
-
 \section{Introduction}
 \label{sec:Introduction}
 
-Introduce the project: its background, context and the problem it addresses.
-Example citation \autocite{lamport_time_1978}.
+\guide{Introduce the project so that the report is self-contained: what the
+system or product is, its background and context, and the problem it
+addresses. Write directly, and group related sentences into full paragraphs
+rather than one sentence per paragraph. Cite your sources, with their dates,
+e.g.\ \autocite{lamport_time_1978}.}
+
+\paragraph{Existing Solutions}
+\guide{Survey the closest existing systems or related work and cite them:
+how each works, and why it is still insufficient for the problem.}
 
 \paragraph{Motivation}
-Explain why the project is worth doing: the gap or need it responds to, and
-who benefits from its outcome.
+\guide{Explain why the project is worth doing: the gap or need it responds
+to, and who benefits from its outcome. Keep this about the problem, not
+about applying what you have learnt, which is true of any project.}
 
 \section{Objectives and Scope}
 \label{sec:Objectives}
 
-State what the project sets out to achieve and the boundaries within which
-it will be carried out.
-
 \paragraph{Objectives}
-List the concrete objectives of the project and how their achievement will
-be judged.
+\guide{State the overall objective in one or two sentences of prose (``We
+aim to build \ldots\ such that \ldots''). An objective says what the project
+achieves; it is not a list of deliverables or deadlines, and the success
+criteria belong with the user stories below.}
 
 \paragraph{Scope}
-Delimit what is in and out of scope, and state any assumptions and
-constraints.
+\guide{In a short paragraph of prose, say what the project covers and where
+its limits are, with any assumptions and constraints (e.g.\ platform,
+language, data sources). State each point once: what is out of scope need
+not be repeated as an assumption.}
 
+% Give every user story a unique identifier and conditions of satisfaction
+% (CoS) that can be tested. Keep the key stories here; the full backlog goes
+% in an appendix.
 \paragraph{Requirements}\label{sec:Requirements}
-Capture the key requirements as user stories (move to an appendix if too
-long).
+\guide{Give the key requirements as user stories, each with testable
+conditions of satisfaction (CoS). The full backlog goes in an appendix.}
+\begin{description}[nosep, leftmargin=3em, labelwidth=2.5em, labelsep=0.5em]
+    \item[US1] \guide{As a $\langle$role$\rangle$, I want
+        $\langle$capability$\rangle$, so that $\langle$benefit$\rangle$.
+        CoS: $\langle$a condition that can be tested$\rangle$;
+        $\langle$another$\rangle$.}
+    \item[US2] \guide{As a $\langle$role$\rangle$, I want \ldots, so that
+        \ldots\ CoS: \ldots}
+\end{description}
 
 \section{Approach}
 \label{sec:Approach}
 
-Describe how the group intends to approach the project topic: the
-methodology, the technologies or techniques being considered, and the
-rationale for these choices.
+\guide{Describe how you will carry out the work: the development process
+(e.g.\ iterations and what each one delivers) and how progress is tracked.
+State what you will use, not what is ``being considered''.}
+
+\paragraph{Architecture}
+\guide{Present the planned structure of the system: its components, what
+each is responsible for and how they interact. A diagram helps. The reader
+should come away knowing how the code will be organised.}
 
 \paragraph{Design Decisions}
-Record the key design decisions, the alternatives considered, and the
-reasons for each choice.
+\guide{Record the key decisions about the system. For each one, give the
+choice made, the alternatives considered and the reason for the choice.}
 
+% The development plan for the project itself: the iterations, and which user
+% stories are implemented in what sequence. Do not simply restate the
+% submission deadlines (Report 1: Sem 1 Week 5, Presentation 1: Sem 1 Week 8,
+% Report 2: Sem 2 Week 2, Report 3: Sem 2 Week 8, Presentation 2: Sem 2
+% Week 12), though they may be marked against the iteration they fall in.
 \paragraph{Project Plan}
-Present the plan of work over the two semesters, aligned to the submission
-deadlines (Table~\ref{tab:Timeline}).
-
-% Timeline over the two semesters. Key deadlines (AY2026/27):
-%   Report 1 (Proposal)        Sem 1, end of Week 5
-%   Presentation 1             Sem 1, end of Week 8
-%   Report 2 (Mid-Term)        Sem 2, end of Week 2
-%   Report 3 (Final)           Sem 2, end of Week 8
-%   Presentation 2             Sem 2, end of Week 12
+\guide{Present the development plan (Table~\ref{tab:Timeline}): how the work
+is split into iterations, and which user stories are implemented in what
+sequence. The rows below are examples.}
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ll}
+\begin{tabular}{clll}
 \toprule
-Period & Planned Work \\
+Iteration & Period & User Stories & Outcome \\
 \midrule
-Sem 1, Weeks 1--5 & Proposal (Report 1) \\
-Sem 1, Weeks 6--13 & Development; Presentation 1 (Week 8) \\
-Sem 2, Weeks 1--2 & Mid-term report (Report 2) \\
-Sem 2, Weeks 3--8 & Final report (Report 3) \\
-Sem 2, Weeks 9--12 & Presentation 2 (Week 12) \\
+1 & Sem 1, Weeks 6--8 & US1, US2 & \guide{Core story working end to end} \\
+2 & Sem 1, Weeks 9--13 & US3, US4 & \guide{Must-have stories complete} \\
+3 & Sem 2, Weeks 1--4 & US5, US6 & \guide{Integrated and deployed} \\
+4 & Sem 2, Weeks 5--8 & US7 & \guide{Evaluation complete} \\
+5 & Sem 2, Weeks 9--12 & --- & \guide{Fixes from the evaluation} \\
 \bottomrule
 \end{tabular}
-\caption{Project timeline}\label{tab:Timeline}
+\caption{Development plan}\label{tab:Timeline}
 \end{table}
 
+\checkpartlength{Proposal}
